@@ -3,6 +3,8 @@ asgiref==3.2.3
 astor==0.8.0
 astroid==2.3.3
 bleach==3.1.0
+boto3==1.12.38
+botocore==1.15.38
 certifi==2019.9.11
 chardet==3.0.4
 colorama==0.4.3
@@ -13,6 +15,7 @@ dj-database-url==0.5.0
 Django==3.0.2
 django-crispy-forms==1.8.1
 django-heroku==0.3.1
+django-storages==1.9.1
 docutils==0.15.2
 EasyProcess==0.2.10
 entrypoint2==0.2
@@ -24,6 +27,7 @@ gunicorn==20.0.4
 h5py==2.10.0
 idna==2.8
 isort==4.3.21
+jmespath==0.9.5
 Keras-Applications==1.0.8
 Keras-Preprocessing==1.1.0
 kiwisolver==1.1.0
@@ -59,6 +63,7 @@ readme-renderer==24.0
 requests==2.22.0
 requests-toolbelt==0.9.1
 retrying==1.3.3
+s3transfer==0.3.3
 SimpleWebSocketServer==0.1.1
 six==1.12.0
 sqlparse==0.3.0
