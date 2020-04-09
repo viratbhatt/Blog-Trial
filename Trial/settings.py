@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -21,14 +20,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = '^gk6!dy_v2#p76qft*hr84x7-(8g@m2wp(r(ui9%!86o1wt*&b'
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = '^gk6!dy_v2#p76qft*hr84x7-(8g@m2wp(r(ui9%!86o1wt*&b'
+#SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
-DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
+DEBUG = True
+#DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
 
-ALLOWED_HOSTS = ['blog-djangoapp.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -43,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'storages'
 ]
 
 MIDDLEWARE = [
@@ -124,7 +122,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
 
@@ -147,13 +145,13 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('email_host_user')
 EMAIL_HOST_PASSWORD = os.environ.get('email_host_password')
 
-AWS_ACCESS_KEY_ID = os.environ.get('access-key-id')
-AWS_SECRET_ACCESS_KEY = os.environ.get('secret-key')
-AWS_STORAGE_BUCKET_NAME = os.environ.get('storage-bucket-name')
+#AWS_ACCESS_KEY_ID = os.environ.get('access-key-id')
+#AWS_SECRET_ACCESS_KEY = os.environ.get('secret-key')
+#WS_STORAGE_BUCKET_NAME = os.environ.get('storage-bucket-name')
 
-AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL = None
+#AWS_S3_FILE_OVERWRITE = False
+#AWS_DEFAULT_ACL = None
 
-DEFAULT_FILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+#DEFAULT_FILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
